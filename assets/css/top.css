@@ -1,0 +1,32 @@
+#top-view {
+    background-color: var(--theme-color);
+    color: #fff;
+}
+
+#top-view .container {
+    background-image: url("/assets/img/bg.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 600px;
+}
+
+@media (max-width: 767px) {
+    #top-view .container {
+        text-align: center;
+    }
+}
+
+#top-view h1 {
+    padding-top: 12rem;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+#top-view h2 {
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+#top-view p {
+    font-size: 2rem;
+}

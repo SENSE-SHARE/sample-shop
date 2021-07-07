@@ -1,0 +1,258 @@
+/* Margin */
+.mt-1 {
+    margin-top: 1rem;
+}
+.mt-2 {
+    margin-top: 2rem;
+}
+.mt-3 {
+    margin-top: 3rem;
+}
+.mt-4 {
+    margin-top: 4rem;
+}
+.mt-5 {
+    margin-top: 5rem;
+}
+
+/* Font Size */
+.fs-12 {
+    font-size: 1.2rem;
+}
+.fs-14 {
+    font-size: 1.4rem;
+}
+.fs-16 {
+    font-size: 1.6rem;
+}
+.fs-18 {
+    font-size: 1.8rem;
+}
+.fs-20 {
+    font-size: 2rem;
+}
+.fs-30 {
+    font-size: 3rem;
+}
+
+/* Font Color */
+.red {
+    color: var(--red);
+}
+.grey {
+    color: var(--grey);
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .flex {
+        flex-wrap: wrap;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-4 {
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: calc((100% - 3rem) / 3);
+}
+
+@media (min-width: 768px) {
+    .col-4:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .col-4 {
+        margin: 0 1rem 1.5rem;
+        width: 100%;
+    }
+}
+
+.col-3 {
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: calc((100% - 4.5rem) / 4);
+}
+
+@media (min-width: 768px) {
+    .col-3:nth-child(4n) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .col-3 {
+        margin: 0 1rem 1.5rem;
+        width: 100%;
+    }
+}
+
+.col-6 {
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: calc((100% - 4.5rem) / 2);
+}
+
+@media (min-width: 768px) {
+    .col-6:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .col-6 {
+        margin: 0 0 1.5rem;
+        width: 100%;
+    }
+}
+
+.col-12 {
+    margin-right: 3rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .col-12 {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+}
+
+/* Shadow Panel */
+.shadow-panel {
+    background-color: var(--bg-color);
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    padding: 5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+@media (max-width: 767px) {
+    .shadow-panel {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+/* Card */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.5rem;
+}
+
+.card-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    background-color: #3ed6f1;
+    color: #07171a;
+    padding: 1rem 1.25rem;
+    font-size: 1.5rem;
+}
+
+.card-body {
+    padding: 1rem 1.25rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+/* Message */
+.message {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.message h2 {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+.message p {
+    line-height: 3rem;
+}
+
+.message .btn-area {
+    margin: 3rem 0;
+}
+
+.message .error-img {
+    width: 200px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 0.4em 1rem;
+    font-size: 1.6rem;
+    border-radius: 0.25rem;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-sm {
+    padding: 0.25em 0.5rem;
+    font-size: 1.4rem;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-outline {
+    color: var(--theme-color);
+    border-color: var(--theme-color);
+}
+.btn-outline:hover {
+    color: #fff;
+    background-color: var(--theme-color);
+}
+
+.btn-pink {
+    background-color: var(--pink);
+}
+.btn-pink:hover {
+    background-color: var(--pink-dark);
+}
+
+.btn-red {
+    background-color: var(--red);
+}
+.btn-red:hover {
+    background-color: var(--red-dark);
+}
+
+/* Under Line */
+.under-line {
+    padding: 0 1rem 0.5rem;
+    border-bottom: solid 2px var(--theme-color);
+}

@@ -1,0 +1,99 @@
+@import url(class.css);
+@import url(header-footer.css);
+@import url(top.css);
+@import url(product.css);
+@import url(cart.css);
+@import url(order.css);
+
+:root {
+    --bg-color: #f8f9fa;
+    --theme-color: #3ed6f1;
+    --footer-color: #212529;
+    --font-color: #373f50;
+    --border-color: #ced4da;
+    --active-color: #fe696a;
+    --pink: #f23f7e;
+    --pink-dark: #cc356a;
+    --red: #dc3545;
+    --red-dark: #99000f;
+    --grey: #565959;
+    --font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--font-color);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+input,
+textarea {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--theme-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}

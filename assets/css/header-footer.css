@@ -49,6 +49,7 @@ header {
     right: 2%;
     font-size: 1.7rem;
     color: var(--font-color);
+    cursor: pointer;
 }
 
 /* Header Cart Button */

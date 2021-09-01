@@ -27,7 +27,7 @@
             <!-- 検索ボックス -->
             <form id="search-box">
                 <input type="text" placeholder="商品を検索">
-                <a href="/list.php"><i class="bi-search"></i></a>
+                <i id="search-btn" class="bi-search"></i>
             </form>
 
             <!-- カートボタン -->
@@ -123,8 +123,12 @@
                 $('#product-big-image img').attr('src', img)
             });
         });
+        $(function() {
+            $('#search-btn').on('click', function() {
+                $('#search-box').submit();
+            });
+        });
     </script>
-
 </body>
 
 </html>

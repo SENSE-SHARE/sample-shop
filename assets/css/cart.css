@@ -75,6 +75,10 @@
 .cart-del-btn {
     margin-top: 1rem;
     font-size: 1.4rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .sub-total {

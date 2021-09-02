@@ -40,7 +40,7 @@
 
     <main class="container">
 
-        <div class="shadow-panel">
+        <form class="shadow-panel" id="cart-form" method="POST">
             <h2 id="cart-title">ショッピングカート</h2>
 
             <!-- 商品ブロック -->
@@ -63,7 +63,7 @@
                         </select>
                     </div>
                     <div class="mt-1">
-                        <a href="cart.php" class="cart-del-btn red"><i class="bi-x-circle"></i> 削除</a>
+                        <button type="button" class="cart-del-btn red"><i class="bi-x-circle"></i> 削除</button>
                     </div>
                 </div>
 
@@ -81,7 +81,7 @@
             <div class="cart-btn">
                 <a class="btn btn-red" href="entry.php">レジに進む</a>
             </div>
-        </div>
+        </form>
     </main>
 
     <footer>

@@ -70,8 +70,8 @@
                 </div>
 
                 <!-- 数量選択 -->
-                <div class="flex mt-2">
-                    <select id="amount-select">
+                <form class="flex mt-2" method="POST">
+                    <select id="amount-select" name="amount">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -80,8 +80,8 @@
                     </select>
 
                     <!-- カートに入れるボタン -->
-                    <a class="btn btn-block btn-red" href="cart.php"><i class="bi-cart"></i> カートに入れる</a>
-                </div>
+                    <button class="btn btn-block btn-red" type="submit"><i class="bi-cart"></i> カートに入れる</button>
+                </form>
 
                 <!-- 商品説明 -->
                 <div class="card mt-2">

@@ -1,278 +1,253 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" type="image/png" href="assets/img/favicon/apple-touch-icon-180x180.png" />
+        <link rel="icon" type="image/png" href="assets/img/favicon/icon-192x192.png" />
 
-    <link rel="apple-touch-icon" type="image/png" href="assets/img/favicon/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="assets/img/favicon/icon-192x192.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="assets/css/style.css" />
 
-    <link rel="stylesheet" href="assets/css/style.css">
+        <title>EXE Sample Shop</title>
+    </head>
 
-    <title>EXE Sample Shop</title>
-</head>
+    <body>
+        <header>
+            <div class="container flex">
+                <!-- ロゴエリア -->
+                <a id="logo" href="/">
+                    <img src="assets/img/logo.png" />
+                    <h1>EXE Sample Shop</h1>
+                </a>
 
-<body>
-    <header>
-        <div class="container flex">
-            <!-- ロゴエリア -->
-            <a id="logo" href="/">
-                <img src="assets/img/logo.png">
-                <h1>EXE Sample Shop</h1>
-            </a>
+                <!-- 検索ボックス -->
+                <form id="search-box">
+                    <input type="text" placeholder="商品を検索" />
+                    <i id="search-btn" class="bi-search"></i>
+                </form>
 
-            <!-- 検索ボックス -->
-            <form id="search-box">
-                <input type="text" placeholder="商品を検索">
-                <i id="search-btn" class="bi-search"></i>
-            </form>
-
-            <!-- カートボタン -->
-            <a id="cart-btn" href="/cart.php">
-                <i class="bi-cart"></i>
-                <span>4</span>
-            </a>
-        </div>
-    </header>
-
-    <main class="container">
-
-        <div class="shadow-panel">
-            <!-- 注文ステップ -->
-            <div class="order-step">
-                <div class="item active">ご注文情報入力</div>
-                <div class="item">注文内容確認</div>
-                <div class="item">注文完了</div>
+                <!-- カートボタン -->
+                <a id="cart-btn" href="/cart.php">
+                    <i class="bi-cart"></i>
+                    <span>4</span>
+                </a>
             </div>
+        </header>
 
-            <div class="flex mt-3">
+        <main class="container">
+            <div class="shadow-panel">
+                <!-- 注文ステップ -->
+                <div class="order-step">
+                    <div class="item active">ご注文情報入力</div>
+                    <div class="item">注文内容確認</div>
+                    <div class="item">注文完了</div>
+                </div>
 
-                <!-- ご注文情報入力エリア -->
-                <section class="order-left">
-                    <h2 class="order-section-title">ご注文者情報</h2>
+                <div class="flex mt-3">
+                    <!-- ご注文情報入力エリア -->
+                    <section class="order-left">
+                        <form method="POST">
+                            <h2 class="order-section-title">ご注文者情報／お届け先</h2>
 
-                    <div class="row">
-                        <div class="col-6">
-                            <label class="form-label">お名前（姓）</label>
-                            <input type="text">
-                        </div>
-                        <div class="col-6">
-                            <label class="form-label">お名前（名）</label>
-                            <input type="text">
-                        </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label class="form-label">お名前（姓）</label>
+                                    <input type="text" />
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label">お名前（カナ）</label>
+                                    <input type="text" />
+                                </div>
 
-                        <div class="col-6">
-                            <label class="form-label">カナ（姓）</label>
-                            <input type="text">
-                        </div>
-                        <div class="col-6">
-                            <label class="form-label">カナ（名）</label>
-                            <input type="text">
-                        </div>
+                                <div class="col-6">
+                                    <label class="form-label">郵便番号</label>
+                                    <input type="text" />
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label">都道府県</label>
+                                    <select id="pref-select">
+                                        <option value="1">北海道</option>
+                                        <option value="2">青森県</option>
+                                        <option value="3">岩手県</option>
+                                        <option value="4">秋田県</option>
+                                        <option value="5">宮城県</option>
+                                        <option value="6">山形県</option>
+                                        <option value="7">福島県</option>
+                                        <option value="8">新潟県</option>
+                                        <option value="9">栃木県</option>
+                                        <option value="10">茨城県</option>
+                                        <option value="11">群馬県</option>
+                                        <option value="12">埼玉県</option>
+                                        <option value="13">東京都</option>
+                                        <option value="14">千葉県</option>
+                                        <option value="15">神奈川県</option>
+                                        <option value="16">山梨県</option>
+                                        <option value="17">静岡県</option>
+                                        <option value="18">長野県</option>
+                                        <option value="19">富山県</option>
+                                        <option value="20">岐阜県</option>
+                                        <option value="21">愛知県</option>
+                                        <option value="22">石川県</option>
+                                        <option value="23">福井県</option>
+                                        <option value="24">滋賀県</option>
+                                        <option value="25">三重県</option>
+                                        <option value="26">京都府</option>
+                                        <option value="27">奈良県</option>
+                                        <option value="28">大阪府</option>
+                                        <option value="29">和歌山県</option>
+                                        <option value="30">兵庫県</option>
+                                        <option value="31">鳥取県</option>
+                                        <option value="32">岡山県</option>
+                                        <option value="33">島根県</option>
+                                        <option value="34">広島県</option>
+                                        <option value="35">山口県</option>
+                                        <option value="36">香川県</option>
+                                        <option value="37">徳島県</option>
+                                        <option value="38">高知県</option>
+                                        <option value="39">愛媛県</option>
+                                        <option value="40">福岡県</option>
+                                        <option value="41">佐賀県</option>
+                                        <option value="42">大分県</option>
+                                        <option value="43">長崎県</option>
+                                        <option value="44">熊本県</option>
+                                        <option value="45">宮崎県</option>
+                                        <option value="46">鹿児島県</option>
+                                        <option value="47">沖縄県</option>
+                                        <option value="99">海外</option>
+                                    </select>
+                                </div>
 
-                        <div class="col-6">
-                            <label class="form-label">郵便番号</label>
-                            <input type="text">
-                        </div>
-                        <div class="col-6">
-                            <label class="form-label">都道府県</label>
-                            <select id="pref-select">
-                                <option value="1">北海道</option>
-                                <option value="2">青森県</option>
-                                <option value="3">岩手県</option>
-                                <option value="4">秋田県</option>
-                                <option value="5">宮城県</option>
-                                <option value="6">山形県</option>
-                                <option value="7">福島県</option>
-                                <option value="8">新潟県</option>
-                                <option value="9">栃木県</option>
-                                <option value="10">茨城県</option>
-                                <option value="11">群馬県</option>
-                                <option value="12">埼玉県</option>
-                                <option value="13">東京都</option>
-                                <option value="14">千葉県</option>
-                                <option value="15">神奈川県</option>
-                                <option value="16">山梨県</option>
-                                <option value="17">静岡県</option>
-                                <option value="18">長野県</option>
-                                <option value="19">富山県</option>
-                                <option value="20">岐阜県</option>
-                                <option value="21">愛知県</option>
-                                <option value="22">石川県</option>
-                                <option value="23">福井県</option>
-                                <option value="24">滋賀県</option>
-                                <option value="25">三重県</option>
-                                <option value="26">京都府</option>
-                                <option value="27">奈良県</option>
-                                <option value="28">大阪府</option>
-                                <option value="29">和歌山県</option>
-                                <option value="30">兵庫県</option>
-                                <option value="31">鳥取県</option>
-                                <option value="32">岡山県</option>
-                                <option value="33">島根県</option>
-                                <option value="34">広島県</option>
-                                <option value="35">山口県</option>
-                                <option value="36">香川県</option>
-                                <option value="37">徳島県</option>
-                                <option value="38">高知県</option>
-                                <option value="39">愛媛県</option>
-                                <option value="40">福岡県</option>
-                                <option value="41">佐賀県</option>
-                                <option value="42">大分県</option>
-                                <option value="43">長崎県</option>
-                                <option value="44">熊本県</option>
-                                <option value="45">宮崎県</option>
-                                <option value="46">鹿児島県</option>
-                                <option value="47">沖縄県</option>
-                                <option value="99">海外</option>                                
-                            </select>
-                        </div>
+                                <div class="col-6">
+                                    <label class="form-label">市区町村</label>
+                                    <input type="text" />
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label">町名・番地・部屋番号</label>
+                                    <input type="text" />
+                                </div>
 
-                        <div class="col-6">
-                            <label class="form-label">市区町村</label>
-                            <input type="text">
-                        </div>
-                        <div class="col-6">
-                            <label class="form-label">町名・番地・部屋番号</label>
-                            <input type="text">
-                        </div>
+                                <div class="col-6">
+                                    <label class="form-label">メールアドレス</label>
+                                    <input type="text" />
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label">電話番号</label>
+                                    <input type="text" />
+                                </div>
 
-                        <div class="col-6">
-                            <label class="form-label">メールアドレス</label>
-                            <input type="text">
-                        </div>
-                        <div class="col-6">
-                            <label class="form-label">電話番号</label>
-                            <input type="text">
-                        </div>
-
-                        <div class="col-12">
-                            <label class="form-label">備考欄</label>
-                            <textarea rows="5"></textarea>
-                        </div>
-                    </div>
-
-                    <h2 class="order-section-title">お支払い方法</h2>
-
-                    <div class="row">
-                        <div class="col-6">
-                            <div>
-                                <input type="radio" checked="">
-                                <label class="check-label">クレジットカード</label>
+                                <div class="col-12">
+                                    <label class="form-label">備考欄</label>
+                                    <textarea rows="5"></textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div>
-                                <input type="radio">
-                                <label class="check-label">銀行振込</label>
+
+                            <h2 class="order-section-title">お支払い方法</h2>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div>
+                                        <input type="radio" value="1" checked="" />
+                                        <label class="check-label">クレジットカード</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <input type="radio" value="2" />
+                                        <label class="check-label">銀行振込</label>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <h2 class="order-section-title">お届け先</h2>
-
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="form-check">
-                                <input type="checkbox" checked="">
-                                <label class="check-label">ご注文者情報と同じ</label>
+                            <div class="row mt-2">
+                                <div class="col-6">
+                                    <a class="btn btn-outline btn-block" href="cart.php"><i class="bi-arrow-left"></i>ショッピングカートに戻る</a>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn btn-red btn-block">注文確認画面へ<i class="bi-arrow-right"></i></button>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </form>
+                    </section>
 
-                    <div class="row mt-2">
-                        <div class="col-6">
-                            <a class="btn btn-outline btn-block" href="cart.php"><i class="bi-arrow-left"></i>ショッピングカートに戻る</a>
-                        </div>
-                        <div class="col-6">
-                            <a class="btn btn-red btn-block" href="confirm.php">注文確認画面へ<i class="bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </section>
+                    <!-- ご注文内容表示エリア -->
+                    <section class="order-right">
+                        <div class="order-sidebar">
+                            <h2>ご注文内容</h2>
 
-                <!-- ご注文内容表示エリア -->
-                <section class="order-right">
-                    <div class="order-sidebar">
-                        <h2>ご注文内容</h2>
-
-                        <!-- 商品ブロック -->
-                        <div class="cart-item">
-                            <img src="assets/img/products/1.jpg">
-                            <div class="meta">
-                                <h3>商品A</h3>
-                                <div class="price">&yen; 500<span class="grey"> x 1個</span></div>
+                            <!-- 商品ブロック -->
+                            <div class="cart-item">
+                                <img src="assets/img/products/1.jpg" />
+                                <div class="meta">
+                                    <h3>商品A</h3>
+                                    <div class="price">&yen; 500<span class="grey"> x 1個</span></div>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- 商品ブロック -->
-                        <div class="cart-item">
-                            <img src="assets/img/products/2.jpg">
-                            <div class="meta">
-                                <h3>商品B</h3>
-                                <div class="price">&yen; 500<span class="grey"> x 1個</span></div>
+                            <!-- 商品ブロック -->
+                            <div class="cart-item">
+                                <img src="assets/img/products/2.jpg" />
+                                <div class="meta">
+                                    <h3>商品B</h3>
+                                    <div class="price">&yen; 500<span class="grey"> x 1個</span></div>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- 商品ブロック -->
-                        <div class="cart-item">
-                            <img src="assets/img/products/3.jpg">
-                            <div class="meta">
-                                <h3>商品C</h3>
-                                <div class="price">&yen; 500<span class="grey"> x 1個</span></div>
+                            <!-- 商品ブロック -->
+                            <div class="cart-item">
+                                <img src="assets/img/products/3.jpg" />
+                                <div class="meta">
+                                    <h3>商品C</h3>
+                                    <div class="price">&yen; 500<span class="grey"> x 1個</span></div>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- 小計 -->
-                        <div class="sub-total">
-                            <div>小計:</div>
-                            <div>&yen; 1,500</div>
-                        </div>
+                            <!-- 小計 -->
+                            <div class="sub-total">
+                                <div>小計:</div>
+                                <div>&yen; 1,500</div>
+                            </div>
 
-                        <!-- 送料 -->
-                        <div class="sub-total">
-                            <div>送料:</div>
-                            <div>※次の画面で計算されます</div>
-                        </div>
+                            <!-- 送料 -->
+                            <div class="sub-total">
+                                <div>送料:</div>
+                                <div>※次の画面で計算されます</div>
+                            </div>
 
-                        <!-- 合計 -->
-                        <div class="total">&yen; 1,500</div>
-                    </div>
-                </section>
+                            <!-- 合計 -->
+                            <div class="total">&yen; 1,500</div>
+                        </div>
+                    </section>
+                </div>
             </div>
+        </main>
 
-        </div>
-    </main>
+        <footer>
+            <div class="container">
+                <!-- フッターロゴ -->
+                <img id="footer-logo" src="assets/img/f_logo.png" />
 
-    <footer>
-        <div class="container">
-            <!-- フッターロゴ -->
-            <img id="footer-logo" src="assets/img/f_logo.png">
+                <!-- 各種ページリンク -->
+                <ul id="footer-list">
+                    <li><a href="#">運営元</a></li>
+                    <li><a href="#">特定商取引法に基づく表記</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                </ul>
 
-            <!-- 各種ページリンク -->
-            <ul id="footer-list">
-                <li><a href="#">運営元</a></li>
-                <li><a href="#">特定商取引法に基づく表記</a></li>
-                <li><a href="#">プライバシーポリシー</a></li>
-            </ul>
-
-            <!-- コピーライト -->
-            <div id="footer-copy">
-                &copy; <a href="#" target="_blank">EXE Sample Shop</a> All rights reserved.
+                <!-- コピーライト -->
+                <div id="footer-copy">&copy; <a href="#" target="_blank">EXE Sample Shop</a> All rights reserved.</div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        $(function() {
-            $('#search-btn').on('click', function() {
-                $('#search-box').submit();
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $("#search-btn").on("click", function () {
+                    $("#search-box").submit();
+                });
             });
-        });
-    </script>
-</body>
-
+        </script>
+    </body>
 </html>

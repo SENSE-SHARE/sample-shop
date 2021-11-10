@@ -251,8 +251,11 @@
     background-color: var(--red-dark);
 }
 
-/* Under Line */
 .under-line {
     padding: 0 1rem 0.5rem;
     border-bottom: solid 2px var(--theme-color);
+}
+
+.is-error {
+    border: 1px solid var(--red) !important;
 }
